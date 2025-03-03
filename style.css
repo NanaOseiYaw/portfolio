@@ -189,56 +189,82 @@ span{
     box-shadow: 0 0 25px #b74b4b;
 }
 
-.ttpText{
+.about, .projects, .services, .contact {
+    padding: 5rem 9%;
+    text-align: center;
+}
+
+.about h2, .projects h2, .services h2, .contact h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.about p, .projects p, .services p, .contact p {
+    font-size: 1.8rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact button {
+    padding: 1rem 2rem;
+    background-color: #b74b4b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact button:hover {
+    background-color: white;
+    color: #b74b4b;
+}
+
+
+.ttpText span {
+    position: relative;
+    display: inline-block;
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
 }
 
-.ttpText span{
-    position: relative;
+.ttpText span::after {
+    content: "Web Developer";
+    animation: words 10s infinite; /* Slowed down from 5s to 10s */
 }
 
-.ttpText span::before{
-    content: "software Developer";
-    color: #b74b4b;
-    animation: words 20s infinite;
-}
-
-.ttpText span::after{
-    content: "";
-    background-color: black;
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid black;
-    right: -8;
-    animation: cursor 0.6s infinite;
-}
-
-@keyframes cursor{
-    to{
-        border-left: 3px solid #b74b4b;
+@keyframes words {
+    0%, 25% {
+        content: "Web Developer";
     }
-}
-
-@keyframes words{
-    0%, 20%{
-        content: "Web Developer;
-    }
-    21%, 40%{
-        content: "Developer";
-    }
-    41%, 60%{
+    26%, 50% {
         content: "Web Designer";
     }
-    61%, 80%{
+    51%, 75% {
         content: "Photographer";
     }
-    81%, 100%{
+    76%, 100% {
         content: "Editor";
     }
 }
+
+
 
 @media(max-width:1000px){
     .home{
