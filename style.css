@@ -133,11 +133,13 @@ span{
 
 .homeImg img{
     position: relative;
-    width: 32vw;
+    margin-top: 3%;
+    width: 30vw;
     border-radius: 50%;
     box-shadow: 0 0 25px #b74b4b;
     cursor: pointer;
-  transition: 0.3s linear;
+    transition: 0.3s linear;
+    animation: pulse 2s infinite;
 }
 
 .homeImg img:hover{
